@@ -1,0 +1,22 @@
+{
+  "name": "pruebas-cordinadora-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "test": "cucumber-js features --require-module ts-node/register --require src/steps/**/*.ts --require src/support/**/*.ts --require src/tasks/**/*.ts --format json:reports/report.json",
+  "report": "node reportOptions.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@types/node": "^24.0.10",
+    "cucumber": "^6.0.7",
+    "cucumber-html-reporter": "^7.2.0",
+    "playwright": "^1.53.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

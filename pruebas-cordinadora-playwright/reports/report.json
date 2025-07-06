@@ -1,0 +1,813 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "consultar-guía;consulta-sin-código",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Consulta sin código",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 78836663
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 581454
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "intento consultar una guía sin código",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 531629069
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "el sistema debe responder con un código 400",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3808482
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "el mensaje de error debe ser \"El campo codigo_remision no puede estar vacío\" por no enviar el codigo remision",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8951237
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4455626
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "consultar-guía;consulta-una-guía-con-código-0",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Consulta una guía con código 0",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3394306
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 415526
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "consulto una guía con código \"0\"",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 600197088
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "el sistema debe responder con un código 200",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 794432
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "la información de la guía debe estar vacía",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5207060
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12707545
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "consultar-guía;consulta-una-guía-existente",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Consulta una guía existente",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4748158
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 296887
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "consulto una guía con código \"99020012766\"",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1798441478
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "el sistema debe responder con un código 200",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 743289
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "el sistema debe mostrar el detalle correcto de la guía",
+            "match": {
+              "location": "src/steps/consultar_guia.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56883730
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 36252350
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "consultar-guía",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Consultar guía",
+    "tags": [],
+    "uri": "features/consultar_guia.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "crear-guía;crear-guía-con-datos-válidos",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Crear guía con datos válidos",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2546717
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 256750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "creo una guía con servicio \"Recaudo Contra Entrega\", referencia \"REF12345\" y valor 10000000",
+            "match": {
+              "location": "src/steps/crear_guia.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128747653
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "el sistema debe crear la guía exitosamente",
+            "match": {
+              "location": "src/steps/crear_guia.steps.ts:18"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5114105,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m400\u001b[39m\n    at Proxy.<anonymous> (/Users/Cata/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at World.<anonymous> (/Users/Cata/Documents/Prueba_coordinadora/Automatizacion/Coordinadora/pruebas-cordinadora-playwright/src/steps/crear_guia.steps.ts:19:34)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3606164
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "crear-guía",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Crear guía",
+    "tags": [],
+    "uri": "features/crear_guia.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "validaciones-al-crear-guía;validaciones-negativas-al-crear-guía",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Validaciones negativas al crear guía",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 19655643
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 202316
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "creo una guía con referencia \"REF123\" y valor \"\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 144429853
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "el sistema debe responder con código 400",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 612521
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "el mensaje de error debe ser \"Los valores de entrada no son correctos.\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64544525
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 54713845
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validaciones-al-crear-guía;validaciones-negativas-al-crear-guía",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Validaciones negativas al crear guía",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31225801
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 280645
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "creo una guía con referencia \"\" y valor \"\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 192007637
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "el sistema debe responder con código 400",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3194856
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "el mensaje de error debe ser \"Los valores de entrada no son correctos.\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40241862
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 13925563
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validaciones-al-crear-guía;validaciones-negativas-al-crear-guía",
+        "keyword": "Scenario Outline",
+        "line": 15,
+        "name": "Validaciones negativas al crear guía",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3362758
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 487744
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "creo una guía con referencia \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaa\" y valor 10000",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 167522547
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "el sistema debe responder con código 400",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 623589
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "el mensaje de error debe ser \"Los valores de entrada no son correctos.\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59302283
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2542558
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validaciones-al-crear-guía;validaciones-negativas-al-crear-guía",
+        "keyword": "Scenario Outline",
+        "line": 16,
+        "name": "Validaciones negativas al crear guía",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26055232
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 710381
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "creo una guía con referencia \"ABC123\" y valor \"diez mil\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 151102229
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "el sistema debe responder con código 400",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1243599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "el mensaje de error debe ser \"Los valores de entrada no son correctos.\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38817882
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5842986
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validaciones-al-crear-guía;validaciones-negativas-al-crear-guía",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "Validaciones negativas al crear guía",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15216088
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 305028
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "creo una guía con referencia \"compra 123$#&/(=?\" y valor 5000",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 140676142
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "el sistema debe responder con código 400",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 913102
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "el mensaje de error debe ser \"Los valores de entrada no son correctos.\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4778077
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 58090086
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "validaciones-al-crear-guía;payload-incompleto-sin-referencia",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Payload incompleto sin referencia",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 25061791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que soy un usuario autenticado",
+            "match": {
+              "location": "src/steps/autenticacion.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 338029
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "envío un JSON sin el campo referenciaRecaudo",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163732919
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "el sistema debe responder con código 400",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 486860
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "el mensaje de error debe ser \"Los valores de entrada no son correctos.\"",
+            "match": {
+              "location": "src/steps/validar_guia.steps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7586476
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27990813
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "validaciones-al-crear-guía",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Validaciones al crear guía",
+    "tags": [],
+    "uri": "features/validar_guia.feature"
+  }
+]

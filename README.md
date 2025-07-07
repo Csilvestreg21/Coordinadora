@@ -1,46 +1,47 @@
-# 🚀 Coordinadora - Automatización y Pruebas de Carga
+# 🚀 Coordinadora - Prueba de Automatización Funcional
 
-Este repositorio contiene dos proyectos complementarios orientados a validar el comportamiento funcional y el rendimiento de los servicios de Coordinadora.
+Este repositorio contiene el desarrollo de la **prueba funcional automatizada** para los servicios de Coordinadora, enfocado exclusivamente en los flujos de **creación y consulta de guías**.
+
+---
 
 ## 📂 Estructura del proyecto
 
-- [`automatizacion/`](/pruebas-cordinadora-playwright/): pruebas funcionales automatizadas utilizando Playwright y Cucumber.
-- [`pruebas-carga/`](/pruebas-de-carga-y-estres/): pruebas de carga y estrés sobre servicios clave usando Locust.
+- [`automatizacion/`](/pruebas-cordinadora-playwright/): contiene los escenarios automatizados para validar el comportamiento de los servicios de creación y consulta de guías utilizando Playwright, Cucumber y TypeScript.
+- [`pruebas-carga/`](/pruebas-de-carga-y-estres/): (opcional) scripts de carga que simulan múltiples solicitudes concurrentes con Locust. No hacen parte de la entrega funcional requerida, pero están disponibles como referencia.
 
 ---
 
-## 🧪 Automatización Funcional
+## 🧪 Automatización Funcional (entrega obligatoria)
 
-La carpeta `automatizacion/` contiene escenarios Gherkin, step definitions y ejecución de pruebas sobre los microservicios de Coordinadora. Las pruebas incluyen:
+La carpeta `automatizacion/` contiene todo lo necesario para validar, de manera automatizada, los servicios de Coordinadora relacionados con guías. Esta prueba incluye:
 
-- Validación de alertas
-- Actualización de guías
-- Asignación de unidades
-- Consultas con base de datos
-- Autorizaciones con múltiples condiciones
+- ✅ Creación de guía con datos válidos
+- ❌ Validación de errores con datos inválidos o campos vacíos
+- 🔍 Consulta de guía por número
 
-📍 Para más detalles de ejecución, ver el [`README`](/pruebas-cordinadora-playwright/README.md) dentro de esa carpeta.
+Los escenarios están escritos en lenguaje Gherkin y se ejecutan sobre un framework construido con Playwright y Cucumber, siguiendo el patrón Screenplay para mayor escalabilidad y claridad.
 
----
-
-## 📈 Pruebas de Carga
-
-La carpeta `pruebas-carga/` contiene scripts de Locust para evaluar el rendimiento de servicios como:
-
-- `/validaciones?etiqueta1d={etiqueta}&codigo_terminal_dispositivo=3`
-- `/guias/cm-guias-consultas-ms/guia/{numero_guia}`
-
-Los scripts simulan carga escalonada, con generación de hasta 625 solicitudes por segundo.
-
-📍 Para instrucciones de ejecución, ver el [`README`](/pruebas-de-carga-y-estres/README.md).
+📍 Puedes revisar el detalle y cómo ejecutar las pruebas en el [`README`](/pruebas-cordinadora-playwright/README.md) de la carpeta `automatizacion`.
 
 ---
 
-## ✅ Requisitos generales
+## 📈 (Opcional) Pruebas de Carga
 
-- Python 3.10+
-- Node.js (para automatización funcional)
-- Instalar dependencias específicas dentro de cada subcarpeta
+La carpeta `pruebas-carga/` contiene scripts de Locust para simular carga progresiva sobre endpoints como:
+
+- Post `https://apiv2-test.coordinadora.com/guias/cm-guias-ms/guia`
+- Get `https://apiv2-test.coordinadora.com/guias/cm-guias-consultas-ms/guia/{numero_guia}`
+
+Estas pruebas permiten evaluar el rendimiento del sistema con múltiples usuarios simultáneos y diferentes volúmenes de solicitudes.
+
+📍 Más detalles en el [`README`](/pruebas-de-carga-y-estres/README.md) de esa carpeta.
 
 ---
 
+## ✅ Requisitos generales para ejecutar la prueba funcional
+
+- Node.js v18 o superior
+- Dependencias instaladas mediante `npm install`
+- Conexión a los servicios expuestos por Coordinadora en ambiente de desarrollo o pruebas
+
+---

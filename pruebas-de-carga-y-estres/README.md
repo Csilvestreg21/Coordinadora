@@ -25,7 +25,7 @@ pruebas-performance-locust/
 
 ---
 
-## 🔧 Requisitos
+## Requisitos
 
 - Python 3.9+
 - Pip (gestor de paquetes)

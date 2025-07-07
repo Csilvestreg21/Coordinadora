@@ -6,7 +6,7 @@ const options = {
   jsonFile: 'reports/report.json',  // donde se guarda el resultado JSON
   output: 'reports/report.html',    // HTML de salida
   reportSuiteAsScenarios: true,
-  launchReport: true,               // 👈 abre el reporte en el navegador
+  launchReport: true,               // abre el reporte en el navegador
   metadata: {
     "Proyecto": "Pruebas Coordinadora",
     "Ambiente": "Test",

@@ -5,7 +5,7 @@ export async function crearGuia(request: APIRequestContext, data?: Partial<any>)
     "identificacion": "890904713",
     "divisionCliente": "00",
     "idProceso": 100001,
-    "valorRecaudar": "", // ❗ cuidado con esto si lo necesita el backend
+    "valorRecaudar": "", // cuidado con esto si lo necesita el backend
     "referenciaRecaudo": "REF123",
     "valoracion": 20000,
     "tipoCuenta": 1,

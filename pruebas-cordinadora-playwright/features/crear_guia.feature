@@ -1,4 +1,4 @@
-Feature: Crear guía
+Feature: Crear una guía exitosamente
 
   Scenario: Crear guía con datos válidos
     Given que soy un usuario autenticado
